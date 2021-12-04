@@ -1,0 +1,45 @@
+﻿@keyframes perspective {
+    50% {
+        perspective: 100px;
+    }
+ 
+}
+
+
+body {
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: violet;
+
+}
+
+#app {
+    height: 100%;
+    perspective: 1000000px;
+    
+}
+
+    #app.is-loaded .matrix-bar {
+        height: 100%;
+    }
+
+    #app.is-loaded {
+        animation: perspective 10s 5s alternate linear;
+        
+    }
+
+.matrix-bar {
+    height: 0;
+    position: relative;
+    top: 50px;
+    opacity: 0.8;
+    white-space: nowrap;
+    color: #ff0066;
+    transition: all 5s;
+    text-shadow: 0 2px 2px rgb(255, 80, 80);
+    letter-spacing: 3px;
+    writing-mode: horizontal-tb;
+    overflow: hidden;
+}
